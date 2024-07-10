@@ -1,0 +1,230 @@
+:root{
+    --clr-darkgrayishblue: hsl(217, 19%, 35%);
+    --clr-desaturateddarkblue:  hsl(214, 17%, 51%);
+    --clr-grayishblue:  hsl(212, 23%, 69%);
+    --clr-lightgrayishblue: hsl(210, 46%, 95%);
+
+    --fw-light: 500;
+    --fw-bold: 700;
+
+    --fs: .8125rem;
+    --ff: "Manrope", sans-serif;
+}
+
+
+body{
+    background-color: var(--clr-lightgrayishblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+/*
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    margin: 1.25rem;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.drawerImage img{
+    display: flex;
+    flex:1;
+}
+*/
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas: "drawerImage" "allOtherTexts";
+
+    justify-content: center;
+    margin: 1.25rem;
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 25.9375rem;
+    max-height: 37.5rem;
+}
+
+.allOtherTexts{
+    position: relative;
+}
+
+.drawerImage img{
+    grid-area: drawerImage;
+    height: fit-content;
+    width: 20.4rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+.highlightConvince{
+    grid-area: allOtherTexts;
+    text-align: left;
+    margin: 1rem 2rem;
+    font-family: var(--ff);
+    font-size: 13px;
+}
+
+.highlightedWords{
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--clr-darkgrayishblue);
+}
+
+.convinceStatement{
+    line-height: 1.5;
+    color: var(--clr-darkgrayishblue);
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    font-size: 13px;
+    color: var(--clr-darkgrayishblue);
+    font-weight: bold;
+    font-family: var(--ff);
+}
+
+.nameDate{
+    margin-top: 5px;
+    text-align: left;
+}
+
+.date{
+    font-weight: var(--fw-light);
+}
+
+
+.footer img{
+    height: 3rem;
+    border-radius: 6.25rem;
+}
+
+#shareButton{
+    border: none;
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 6.25rem;
+    margin-top: .43rem;
+}
+
+#shareButton2{
+    border: none;
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 6.25rem;
+    margin-top: .43rem;
+}
+
+.hidden{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--clr-grayishblue);
+    color: var(--clr-lightgrayishblue);
+    font-family: var(--ff);
+    background-color: var(--clr-darkgrayishblue);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
+    bottom: 0;
+    width: 16.5rem;
+    height: 4rem;
+}
+
+.off{
+    display:none;
+}
+
+.popup{
+    display:none;
+}
+
+@media (min-width: 25rem) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 1.25rem;
+        background-color: white;
+        border-radius: 1rem;
+        max-width: 40rem;
+        max-height: 15rem;
+    }
+
+    .drawerImage img{
+        height: fit-content;
+        width: 15rem;
+        height: 15rem;
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
+    }
+
+    .allOtherTexts
+    {
+        max-height: 15rem;
+    }
+
+    .popup{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: var(--clr-grayishblue);
+        color: var(--clr-lightgrayishblue);
+        font-family: var(--ff);
+        background-color: var(--clr-darkgrayishblue);
+        left: 58.75rem;
+        top: 25rem;
+        height: 3.5rem;
+        border-radius: 1rem;
+        width: 15rem;
+        gap: 1rem;
+    }
+
+    #triangle{
+        background-color: var(--clr-grayishblue);
+        color: var(--clr-lightgrayishblue);
+        font-family: var(--ff);
+        background-color: var(--clr-darkgrayishblue);
+        position: absolute;
+        padding: 1rem;
+        left: 58.75rem;
+        top: 25rem;
+ 
+    }
+
+    .popup p{
+        font-size: 13px;
+        margin-left: 2.5rem;
+    }
+
+    .off{
+        display:none;
+    }
+
+    .hidden{
+        display: none;
+    }
+    
+}
